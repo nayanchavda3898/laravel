@@ -54,6 +54,8 @@ Route::get('/admin/view_ground_booking', function () {
 // });
 
 Route::get('admin/add_batch_type','BatchTypeController@index');
+
+
 Route::get('/admin/add_batch_register', function () {
     return view('admin/admin_add_batch_register');
 });
