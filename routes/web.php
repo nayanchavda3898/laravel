@@ -49,21 +49,34 @@ Route::get('/admin/view_ground_booking', function () {
 });
 
 // addd
+
+
 // Route::get('/admin/add_batch_type', function () {
 //     return view('admin/admin_add_batch_type');
 // });
 
 Route::get('admin/add_batch_type','BatchTypeController@index');
+Route::post('admin/insert_batch_type','BatchTypeController@store');
+
+// Route::get('/admin/add_registration', function () {
+    //     return view('admin/admin_add_registration');
+    // });
+
+Route::get('admin/add_registration','RegisterController@index');
 
 
-Route::get('/admin/add_batch_register', function () {
-    return view('admin/admin_add_batch_register');
-});
 
-Route::get('/admin/add_ground_booking', function () {
-    return view('admin/admin_add_ground_booking');
-});
+    
+Route::get('admin/add_batch_register','BatchRegisterController@index');
 
-Route::get('/admin/add_registration', function () {
-    return view('admin/admin_add_registration');
-});
+
+
+// Route::get('/admin/add_ground_booking', function () {
+    //     return view('admin/admin_add_ground_booking');
+    // });
+    
+Route::get('/admin/add_ground_booking','GroundRegisterController@index');
+
+
+
+    

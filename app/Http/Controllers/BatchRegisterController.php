@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\batch_register;
 use App\batch_type;
 use Illuminate\Http\Request;
 
-class BatchTypeController extends Controller
+class BatchRegisterController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(batch_type $batch_type)
     {
         //
-        return view('admin/admin_add_batch_type');
+        return view('admin/admin_add_batch_register')->with('data',batch_type::all());
     }
 
     /**
@@ -37,22 +38,15 @@ class BatchTypeController extends Controller
     public function store(Request $request)
     {
         //
-        $res = new batch_type();
-        $res->batch_name=$request->input('b_name');
-        $res->start_time=$request->input('s_time');
-        $res->end_time=$request->input('e_time');
-        $res->purpose=$request->input('b_purpose');
-        $res->save();
-        return redirect("admin/view_batch_type");
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\batch_type  $batch_type
+     * @param  \App\batch_register  $batch_register
      * @return \Illuminate\Http\Response
      */
-    public function show(batch_type $batch_type)
+    public function show(batch_register $batch_register)
     {
         //
     }
@@ -60,10 +54,10 @@ class BatchTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\batch_type  $batch_type
+     * @param  \App\batch_register  $batch_register
      * @return \Illuminate\Http\Response
      */
-    public function edit(batch_type $batch_type)
+    public function edit(batch_register $batch_register)
     {
         //
     }
@@ -72,10 +66,10 @@ class BatchTypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\batch_type  $batch_type
+     * @param  \App\batch_register  $batch_register
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, batch_type $batch_type)
+    public function update(Request $request, batch_register $batch_register)
     {
         //
     }
@@ -83,10 +77,10 @@ class BatchTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\batch_type  $batch_type
+     * @param  \App\batch_register  $batch_register
      * @return \Illuminate\Http\Response
      */
-    public function destroy(batch_type $batch_type)
+    public function destroy(batch_register $batch_register)
     {
         //
     }

@@ -23,16 +23,18 @@
         <div class="form-group">
                 <label for="btype">Batch Type</label>
                 <select name="btype" id="btype" class="form-control">
-    <option value="Regular" selected>Regular</option>
-    <option value="Vacation">Vacation</option>
-</select>
+                @foreach($data as $i)
+                     <option>{{$i->batch_name}}</option>
+                @endforeach
+                </select>
                
             </div>
         <div class="form-group">
                 <label for="btime">Batch Time</label>
                 <select name="btime" id="btime" class="form-control">
-    <option value="Regular" selected>7am-11am</option>
-    <option value="Vacation">4pm-7pm</option>
+                @foreach($data as $i)
+            <option>{{$i->start_time}} - {{$i->end_time}}</option>
+            @endforeach
 </select>
             </div>   
             <div class="form-group">
