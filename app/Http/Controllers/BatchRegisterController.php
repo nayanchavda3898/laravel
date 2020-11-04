@@ -38,6 +38,19 @@ class BatchRegisterController extends Controller
     public function store(Request $request)
     {
         //
+        $res=new batch_register();
+        $res->name=$request->input('brname');
+        $res->email=$request->input('bremail');
+        $res->contact=$request->input('brcnumber');
+        $res->batch_type=$request->input('brbtype');
+        $res->batch_time=$request->input('brbtime');
+        $res->fdate=$request->input('brfdate');
+        $res->days=$request->input('brdays');
+        $res->amount=$request->input('bramount');
+        $res->uid=$request->input('bruid');
+        $res->status=$request->input('brstatus');
+        $res->save();
+        return redirect('admin/view_batch_register');
     }
 
     /**

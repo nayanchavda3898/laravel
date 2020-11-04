@@ -6,43 +6,49 @@
     <nav class="navbar navbar-default mb-xl-5 mb-4">
         <div class="outer-w3-agile col-xl mt-3">
         <!-- <h4 class="tittle-w3-agileits mb-4">Batch Register</h4> -->
-        <form action="#" method="post">
+        <form action="insert_ground_booking" method="post">
         @csrf
         <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" name="gname"  placeholder="Name" required="" id="name"> 
+                <input type="text" class="form-control" name="grname"  placeholder="Name" required="" id="name"> 
             </div>
         <div class="form-group">
                 <label for="emailid">E-mail id</label>
-                <input type="email" class="form-control" name="gemailid"  placeholder="Email" required="" id="emailid"> 
+                <input type="email" class="form-control" name="gremail"  placeholder="Email" required="" id="emailid"> 
             </div>
         <div class="form-group">
                 <label for="cnumber">Contact Number</label>
-                <input type="number" class="form-control" name="gcnumber"  placeholder="Contact number" required="" id="cnumber"> 
+                <input type="number" class="form-control" name="grcnumber"  placeholder="Contact number" required="" id="cnumber"> 
             </div>
         <div class="form-group">
                 <label for="purpose">Purpose</label>
-                <select name="gpurpose" id="purpose" class="form-control">
-    <option value="Regular" selected>Practice</option>
-    <option value="Vacation">Event</option>
+                <select name="grpurpose" id="purpose" class="form-control">
+                @foreach ($data as $i)
+    <option>{{ $i->purpose }}</option>
+    @endforeach
+   
 </select>
             </div>
             <div class="form-group">
             <label for="fdate">Date</label>
-                <input type="date" class="form-control" name="gdate" required="" id="fdate"> 
+                <input type="date" class="form-control" name="grfdate" required="" id="fdate"> 
             </div>
             <div class="form-group">
             <label for="days">Days</label>
-                <input type="number" class="form-control" name="gbtime" placeholder="How Many Days?" required="" id="days"> 
+                <input type="number" class="form-control" name="grdays" placeholder="How Many Days?" required="" id="days"> 
             </div>
             <div class="form-group">
             <label for="amount">Amount</label>
-                <input type="number" class="form-control" name="gamount" required="" id="amount"> 
+                <input type="number" class="form-control" name="gramount" required="" id="amount"> 
             </div>
             
             <div class="form-group">
             <label for="user_id">User_id</label>
-                <input type="number" class="form-control" name="guserid" required="" id="user_id"> 
+                <input type="number" class="form-control" name="gruid" required="" id="user_id"> 
+            </div>
+            <div class="form-group">
+            <label for="status">Status</label>
+                <input type="number" class="form-control" name="grstatus" required="" id="status"> 
             </div>
             
             <center>

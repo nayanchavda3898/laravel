@@ -1,7 +1,7 @@
 
 @extends('admin/admin_header')
 @section('content')
-<h1>Department</h1>
+<h1>Batch Register</h1>
     <!-- <nav class="navbar navbar-default mb-xl-5 mb-4"> -->
 
         

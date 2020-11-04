@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ground_register;
+use App\batch_type;
 use Illuminate\Http\Request;
 
 class GroundRegisterController extends Controller
@@ -12,10 +13,10 @@ class GroundRegisterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(batch_type $batch_type)
     {
         //
-        return view('admin/admin_add_ground_booking');
+        return view('admin/admin_add_ground_booking')->with('data',batch_type::all());
     }
 
     /**
@@ -37,6 +38,20 @@ class GroundRegisterController extends Controller
     public function store(Request $request)
     {
         //
+        // $res=new ground_register();
+        $res=new ground_register();
+        $res->name=$request->input('grname');
+        $res->email=$request->input('gremail');
+        $res->contact=$request->input('grcnumber');
+        $res->purpose=$request->input('grpurpose');
+        $res->fdate=$request->input('grfdate');
+        $res->days=$request->input('grdays');
+        $res->amount=$request->input('gramount');
+        $res->uid=$request->input('gruid');
+        $res->status=$request->input('grstatus');
+        $res->save();
+        return redirect('admin/view_ground_booking');
+        
     }
 
     /**

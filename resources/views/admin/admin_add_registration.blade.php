@@ -6,35 +6,34 @@
     <nav class="navbar navbar-default mb-xl-5 mb-4">
         <div class="outer-w3-agile col-xl mt-3">
         <!-- <h4 class="tittle-w3-agileits mb-4">Add Registeration</h4> -->
-        <form action="#" method="post">
+        <form action="insert_registration" method="post">
         @csrf
         <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" name="gname"  placeholder="Name" required="" id="name"> 
+                <input type="text" class="form-control" name="rname"  placeholder="Name" required="" id="name"> 
             </div>
         <div class="form-group">
                 <label for="emailid">E-mail id</label>
-                <input type="email" class="form-control" name="gemailid"  placeholder="Email" required="" id="emailid"> 
+                <input type="email" class="form-control" name="remail"  placeholder="Email" required="" id="emailid"> 
             </div>
         <div class="form-group">
                 <label for="cnumber">Contact Number</label>
-                <input type="number" class="form-control" name="gcnumber"  placeholder="Contact number" required="" id="cnumber"> 
+                <input type="number" class="form-control" name="rcnumber"  placeholder="Contact number" required="" id="cnumber"> 
             </div>
             <div class="form-group">
                 <label for="cgender">Select Gender :-</label>
                 <!-- <input type="number" class="form-control" name="gcnumber"  placeholder="Contact number" required="" id="cnumber">  -->
-                <input type="radio" name="gender" id="gen_male" checked>male
-                <input type="radio" name="gender" id="gen_female" >female
+                <input type="radio" name="rgender" value="Male" id="gen_male">Male
+                <input type="radio" name="rgender" value="Female" id="gen_female" >Female
             </div>
             
             <div class="form-group">
                     <label for="cnumber">Age</label>
-                    <input type="number" class="form-control" placeholder="Enter Age">
+                    <input type="number" name="rage" class="form-control" placeholder="Enter Age">
                 </div>
                 <div class="form-group">
                     <label for="cnumber">Password</label>
-                    <input type="password" class="form-control" placeholder="Enter password">
-                   
+                    <input type="password" class="form-control" name="rpassword" placeholder="Enter password">
                 </div>
             
             <center>

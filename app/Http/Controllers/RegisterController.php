@@ -37,6 +37,15 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         //
+        $res=new register();
+        $res->name=$request->input("rname");
+        $res->email=$request->input("remail");
+        $res->contact=$request->input("rcnumber");
+        $res->gender=$request->input("rgender");
+        $res->age=$request->input("rage");
+        $res->password=$request->input("rpassword");
+        $res->save();
+        return redirect('admin/view_registration');
     }
 
     /**

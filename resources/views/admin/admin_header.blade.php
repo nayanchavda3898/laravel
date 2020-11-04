@@ -119,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu3">
                         <li>
-                            <a href="add_ground_booking">Add ground register</a>
+                            <a href="./ground_booking">Add ground register</a>
                         </li>
                         <li>
                             <a href="view_ground_booking">Manage ground register</a>

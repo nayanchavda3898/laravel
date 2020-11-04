@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('index');
 });
@@ -49,33 +38,14 @@ Route::get('/admin/view_ground_booking', function () {
 });
 
 // addd
-
-
-// Route::get('/admin/add_batch_type', function () {
-//     return view('admin/admin_add_batch_type');
-// });
-
 Route::get('admin/add_batch_type','BatchTypeController@index');
 Route::post('admin/insert_batch_type','BatchTypeController@store');
-
-// Route::get('/admin/add_registration', function () {
-    //     return view('admin/admin_add_registration');
-    // });
-
 Route::get('admin/add_registration','RegisterController@index');
-
-
-
-    
+Route::post('admin/insert_registration','RegisterController@store');
 Route::get('admin/add_batch_register','BatchRegisterController@index');
-
-
-
-// Route::get('/admin/add_ground_booking', function () {
-    //     return view('admin/admin_add_ground_booking');
-    // });
-    
-Route::get('/admin/add_ground_booking','GroundRegisterController@index');
+Route::post('admin/insert_batch_register','BatchRegisterController@store');
+Route::get('/admin/ground_booking','GroundRegisterController@index');
+Route::post('/admin/insert_ground_booking','GroundRegisterController@store');
 
 
 
