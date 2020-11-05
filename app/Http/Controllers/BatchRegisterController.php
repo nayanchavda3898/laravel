@@ -61,8 +61,7 @@ class BatchRegisterController extends Controller
      */
     public function show(batch_register $batch_register)
     {
-        //
-        return view('admin/admin_view_batch_register')->with('data',batch_register::all());
+        return view('admin/admin_view_batch_register')->with('data',batch_register::all());    
     }
 
     /**
@@ -94,8 +93,9 @@ class BatchRegisterController extends Controller
      * @param  \App\batch_register  $batch_register
      * @return \Illuminate\Http\Response
      */
-    public function destroy(batch_register $batch_register)
+    public function destroy(batch_register $batch_register,$id)
     {
-        //
+        batch_register::destroy(array('id',$id));
+        return redirect('admin/view_batch_register');
     }
 }

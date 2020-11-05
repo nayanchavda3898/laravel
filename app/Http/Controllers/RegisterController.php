@@ -88,8 +88,9 @@ class RegisterController extends Controller
      * @param  \App\register  $register
      * @return \Illuminate\Http\Response
      */
-    public function destroy(register $register)
+    public function destroy(register $register,$id)
     {
-        //
+        register::destroy(array('id',$id));
+        return redirect('admin/view_registration');
     }
 }

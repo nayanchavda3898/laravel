@@ -31,10 +31,9 @@
                         <td>{{$i->contact}}</td>
                         <td>{{$i->gender}}</td>
                         <td>{{$i->age}}</td>
-                        <td>{{$i->password}}</td>
-                        
+                        <td>{{$i->password}}</td> 
                         <td><a href="update"><i class="fas fa-edit"></li>Edit</a></td>
-                        <td><a href="delete"><i class="fas fa-trash"></li>Delete</a></td>
+                        <td><a href="delete_registration/{{$i->id}}"><i class="fas fa-trash"></li>Delete</a></td>
                         @endforeach
                     </tr>
                 </tbody>

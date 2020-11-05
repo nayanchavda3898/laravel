@@ -41,16 +41,14 @@
             <label for="amount">Amount</label>
                 <input type="number" class="form-control" name="gramount" required="" id="amount"> 
             </div>
-            
             <div class="form-group">
             <label for="user_id">User_id</label>
                 <input type="number" class="form-control" name="gruid" required="" id="user_id"> 
             </div>
             <div class="form-group">
             <label for="status">Status</label>
-                <input type="number" class="form-control" name="grstatus" required="" id="status"> 
+                <input type="text" class="form-control" name="grstatus" required="" id="status"> 
             </div>
-            
             <center>
             <div class="form-group row">
                 <div class="col-sm-10">

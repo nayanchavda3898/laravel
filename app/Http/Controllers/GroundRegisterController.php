@@ -63,6 +63,7 @@ class GroundRegisterController extends Controller
     public function show(ground_register $ground_register)
     {
         //
+        return view('admin/admin_view_ground_booking')->with('data',ground_register::all());   
     }
 
     /**
@@ -94,8 +95,10 @@ class GroundRegisterController extends Controller
      * @param  \App\ground_register  $ground_register
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ground_register $ground_register)
+    public function destroy(ground_register $ground_register,$id)
     {
-        //
+        ground_register::destroy(array('id',$id));
+        return redirect('admin/view_ground_booking');
+
     }
 }

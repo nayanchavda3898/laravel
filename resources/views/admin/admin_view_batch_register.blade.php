@@ -25,7 +25,7 @@
                     </tr>
                 </thead>
                 <tbody>
-               
+                
                     @foreach ($data as $i)
                     <tr>
                         <td>{{$i->id}}</td>
@@ -36,10 +36,13 @@
                         <td>{{$i->start_time}}-{{$i->end_time}}</td>
                         <td>{{$i->fdate}}</td>
                         <td>{{$i->days}}</td>
+                        <td>{{$i->amount}}</td>
+                        <td>{{$i->uid}}</td>
                         <td>{{$i->status}}</td>
                        
                         <td><a href="update"><i class="fas fa-edit"></li>Edit</a></td>
-                        <td><a href="delete"><i class="fas fa-trash"></li>Delete</a></td>
+                        <td><a href="delete_batch_register/{{$i->id}}"><i class="fas fa-trash"></li>Delete</a></td>
+                    @endforeach
                     </tr>
                 </tbody>
             </table>

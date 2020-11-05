@@ -43,25 +43,29 @@ Route::get('/admin/view_ground_booking', function () {
 });
 
 // addd
-Route::get('admin/add_batch_type','BatchTypeController@index');
-Route::post('admin/insert_batch_type','BatchTypeController@store');
+Route::get('/admin/add_batch_type','BatchTypeController@index');
+Route::post('/admin/insert_batch_type','BatchTypeController@store');
 Route::get('/admin/view_batch_type','BatchTypeController@show');
 Route::get('/admin/delete_batch/{id}','BatchTypeController@destroy');
 
 
-Route::get('admin/add_registration','RegisterController@index');
-Route::post('admin/insert_registration','RegisterController@store');
-Route::get('admin/view_registration','RegisterController@show');
+Route::get('/admin/add_registration','RegisterController@index');
+Route::post('/admin/insert_registration','RegisterController@store');
+Route::get('/admin/view_registration','RegisterController@show');
+Route::get('/admin/delete_registration/{id}','RegisterController@destroy');
 
 
-Route::get('admin/add_batch_register','BatchRegisterController@index');
-Route::post('admin/insert_batch_register','BatchRegisterController@store');
-Route::get('admin/view_batch_register','BatchRegisterController@show');
-
+Route::get('/admin/add_batch_register','BatchRegisterController@index');
+Route::post('/admin/insert_batch_register','BatchRegisterController@store');
+Route::get('/admin/view_batch_register','BatchRegisterController@show');
+Route::get('/admin/delete_batch_register/{id}','BatchRegisterController@destroy');
+// error  
 
 
 Route::get('/admin/ground_booking','GroundRegisterController@index');
 Route::post('/admin/insert_ground_booking','GroundRegisterController@store');
+Route::get('/admin/view_ground_booking','GroundRegisterController@show');
+Route::get('/admin/delete_ground_booking/{id}','GroundRegisterController@destroy');
 
 
 
