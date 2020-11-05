@@ -56,7 +56,7 @@ class RegisterController extends Controller
      */
     public function show(register $register)
     {
-        //
+        return view('admin/admin_view_registration')->with('data',register::all());
     }
 
     /**

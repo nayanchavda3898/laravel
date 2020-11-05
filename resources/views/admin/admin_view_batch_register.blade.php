@@ -20,23 +20,25 @@
                         <th scope="col">days</th>
                         <th scope="col">amount</th>
                         <th scope="col">userid</th>
+                        <th scope="col">status</th>
                         <th scope="col" colspan=2><center>Actoin</center></th>
                     </tr>
                 </thead>
                 <tbody>
                
+                    @foreach ($data as $i)
                     <tr>
-                        <td>1</td>
-                        <td>nayan</td>
-                        <td>nayanc674@gmail.com</td>
-                        <td>8777799008</td>
-                        <td>Regular</td>
-                        <td>7:00-11:00</td>
-                        <td>26/10/2020</td>
-                        <td>5</td>
-                        <td>5000</td>
-                        <td>1111</td>
-                        <td><a href="update_department"><i class="fas fa-edit"></li>Edit</a></td>
+                        <td>{{$i->id}}</td>
+                        <td>{{$i->name}}</td>
+                        <td>{{$i->email}}</td>
+                        <td>{{$i->contact}}</td>
+                        <td>{{$i->batch_type}}</td>
+                        <td>{{$i->start_time}}-{{$i->end_time}}</td>
+                        <td>{{$i->fdate}}</td>
+                        <td>{{$i->days}}</td>
+                        <td>{{$i->status}}</td>
+                       
+                        <td><a href="update"><i class="fas fa-edit"></li>Edit</a></td>
                         <td><a href="delete"><i class="fas fa-trash"></li>Delete</a></td>
                     </tr>
                 </tbody>

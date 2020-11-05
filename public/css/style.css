@@ -8292,9 +8292,9 @@ h1, h2, h3, h4, h5,
   @media (max-width: 991.98px) {
     .hero-wrap {
       background-position: top center !important; } }
-  .hero-wrap .overlay {
+  .hero-wrap .overlay { 
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 0;
     right: 0;
     bottom: 0;

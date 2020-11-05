@@ -55,6 +55,7 @@ class BatchTypeController extends Controller
     public function show(batch_type $batch_type)
     {
         //
+        return view('admin/admin_view_batch_type')->with('data',batch_type::all());    
     }
 
     /**
@@ -86,8 +87,10 @@ class BatchTypeController extends Controller
      * @param  \App\batch_type  $batch_type
      * @return \Illuminate\Http\Response
      */
-    public function destroy(batch_type $batch_type)
+    public function destroy(batch_type $batch_type,$id)
     {
         //
+        batch_type::destroy(array('id',$id));
+        return redirect('admin/view_batch_type');
     }
 }

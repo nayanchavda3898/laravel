@@ -62,6 +62,7 @@ class BatchRegisterController extends Controller
     public function show(batch_register $batch_register)
     {
         //
+        return view('admin/admin_view_batch_register')->with('data',batch_register::all());
     }
 
     /**

@@ -23,8 +23,8 @@
             <div class="form-group">
                 <label for="cgender">Select Gender :-</label>
                 <!-- <input type="number" class="form-control" name="gcnumber"  placeholder="Contact number" required="" id="cnumber">  -->
-                <input type="radio" name="rgender" value="Male" id="gen_male">Male
-                <input type="radio" name="rgender" value="Female" id="gen_female" >Female
+                <input type="radio" name="rgender" value="Male" id="cgender" checked>Male
+                <input type="radio" name="rgender" value="Female" id="cgender" >Female
             </div>
             
             <div class="form-group">
