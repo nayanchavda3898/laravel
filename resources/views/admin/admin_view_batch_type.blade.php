@@ -25,7 +25,7 @@
                         
                         <td>{{$i->start_time}} - {{$i->end_time}}</td>
                         <td>{{$i->purpose}}</td>
-                        <td><a href="update"><i class="fas fa-edit"></li>Edit</a></td>
+                        <td><a href="/admin/edit_batch_type{{$i->id}}"><i class="fas fa-edit"></li>Edit</a></td>
                         <td><a href="delete_batch/{{$i->id}}"><i class="fas fa-trash"></li>Delete</a></td>
                     @endforeach
                     </tr>

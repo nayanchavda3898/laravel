@@ -3,7 +3,7 @@
 
 <div class="container">
      <center><h1> <b>Batch Registration</b></h1></center>
-		<form action="#" class="bg-light p-5 contact-form">
+		<form action="insert_batch_registration" method="post" class="bg-light p-5 contact-form">
 			<div class="form-group">
 				Name :-
 			  <input type="text" class="form-control" placeholder="Your Name" required>
@@ -36,10 +36,6 @@
 			<div class="form-group">
 				Days :-
 				  <input type="number" class="form-control" placeholder="How Many Days?" required>
-			  </div>
-			  <div class="form-group">
-				To Date :-
-				  <input type="datetime-local" class="form-control">
 			  </div>
 			  <div class="form-group">
 				Amount :-

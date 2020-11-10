@@ -12,9 +12,14 @@ Route::get('/index', function () {
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/groundbooking', function () {
-    return view('groundbooking');
-});
+// Route::get('/groundbooking', function () {
+//     return view('groundbooking');
+// });
+
+Route::get('/groundbooking','GroundRegisterController@index1');
+Route::post('/insert_ground_book','GroundRegisterController@insert_ground');
+
+
 Route::get('/batchregistration', function () {
     return view('batchregistration');
 });
@@ -47,6 +52,8 @@ Route::get('/admin/add_batch_type','BatchTypeController@index');
 Route::post('/admin/insert_batch_type','BatchTypeController@store');
 Route::get('/admin/view_batch_type','BatchTypeController@show');
 Route::get('/admin/delete_batch/{id}','BatchTypeController@destroy');
+Route::get('/admin/edit_batch_type{id}','BatchTypeController@edit');
+Route::post('/admin/update_batch_type/{id}','BatchTypeController@update');
 
 
 Route::get('/admin/add_registration','RegisterController@index');

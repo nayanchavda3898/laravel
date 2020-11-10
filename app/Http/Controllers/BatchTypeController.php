@@ -64,9 +64,11 @@ class BatchTypeController extends Controller
      * @param  \App\batch_type  $batch_type
      * @return \Illuminate\Http\Response
      */
-    public function edit(batch_type $batch_type)
+    public function edit(batch_type $batch_type,$id)
     {
         //
+        
+        return view('admin/update_batch_type')->with('data',batch_type::find($id));
     }
 
     /**
@@ -76,9 +78,16 @@ class BatchTypeController extends Controller
      * @param  \App\batch_type  $batch_type
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, batch_type $batch_type)
+    public function update(Request $request, batch_type $batch_type,$id)
     {
         //
+        $res = batch_type::find($request->id);
+        $res->batch_name=$request->input('b_name');
+        $res->start_time=$request->input('s_time');
+        $res->end_time=$request->input('e_time');
+        $res->purpose=$request->input('b_purpose');
+        $res->save();
+        return redirect('/admin/view_batch_type');
     }
 
     /**

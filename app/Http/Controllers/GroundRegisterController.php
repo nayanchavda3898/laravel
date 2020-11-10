@@ -19,6 +19,12 @@ class GroundRegisterController extends Controller
         return view('admin/admin_add_ground_booking')->with('data',batch_type::all());
     }
 
+    public function index1(batch_type $batch_type)
+    {
+        # code...
+        return view('groundbooking')->with('data',batch_type::all()); 
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -53,7 +59,17 @@ class GroundRegisterController extends Controller
         return redirect('admin/view_ground_booking');
         
     }
+public function insert_ground(Request $request)
+{
+    # code...
+    $res = new ground_register();
+    $res->name=$request->input('name');
+    $res->email=$request->input('email');
+    $res->save();
+    return redirect('groundbooking');
 
+
+}
     /**
      * Display the specified resource.
      *
